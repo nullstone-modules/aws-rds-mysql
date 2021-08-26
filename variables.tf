@@ -1,6 +1,6 @@
 variable "mysql_version" {
   type        = string
-  default     = "8"
+  default     = "8.0"
   description = "Mysql Engine Version"
 }
 
