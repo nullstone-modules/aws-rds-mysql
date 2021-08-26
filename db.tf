@@ -8,7 +8,7 @@ resource "aws_db_instance" "this" {
   multi_az               = true
   allocated_storage      = var.allocated_storage
   storage_encrypted      = true
-  storage_type           = "standard"
+  storage_type           = "gp2"
   port                   = local.port
   vpc_security_group_ids = [aws_security_group.this.id]
 
