@@ -16,14 +16,14 @@ variable "allocated_storage" {
 }
 
 variable "backup_retention_period" {
-  type    = number
-  default = 5
+  type        = number
+  default     = 5
   description = "The number of days that each backup is retained"
 }
 
 variable "high_availability" {
-  type = bool
-  default = true
+  type        = bool
+  default     = true
   description = <<EOF
 Enables high availability and failover support on the database instance.
 By default, this is enabled to ensure reliability.
