@@ -5,7 +5,7 @@ resource "aws_db_instance" "this" {
   engine                 = "mysql"
   engine_version         = var.mysql_version
   instance_class         = var.instance_class
-  multi_az               = true
+  multi_az               = var.high_availability
   allocated_storage      = var.allocated_storage
   storage_encrypted      = true
   storage_type           = "gp2"
