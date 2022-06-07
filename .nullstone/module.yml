@@ -1,0 +1,11 @@
+org_name: nullstone
+name: aws-rds-mysql
+friendly_name: RDS MySQL Cluster
+description: Produces a standard, best-practice RDS Mysql cluster in AWS
+category: datastore
+type: mysql/aws
+appCategories: []
+layer: database
+is_public: true
+provider_types:
+    - aws
