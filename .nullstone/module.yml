@@ -3,9 +3,11 @@ name: aws-rds-mysql
 friendly_name: RDS MySQL Cluster
 description: Produces a standard, best-practice RDS Mysql cluster in AWS
 category: datastore
-type: mysql/aws
-appCategories: []
-layer: database
-is_public: true
+subcategory: ""
 provider_types:
     - aws
+platform: mysql
+subplatform: rds
+type: mysql/aws
+appCategories: []
+is_public: true
