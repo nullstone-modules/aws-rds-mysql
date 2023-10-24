@@ -5,8 +5,14 @@ variable "mysql_version" {
 }
 
 variable "instance_class" {
-  type    = string
-  default = "db.t3.micro"
+  type        = string
+  default     = "db.t3.micro"
+  description = <<EOF
+Available Instance Types: https://aws.amazon.com/rds/instance-types/
+T = Burstable (can utilize full CPU/memory for short periods of time)
+M = General-Purpose
+R/X/Z = Memory-Optimized
+EOF
 }
 
 variable "allocated_storage" {
