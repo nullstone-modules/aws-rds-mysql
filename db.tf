@@ -1,3 +1,7 @@
+locals {
+  ca_cert_identifier = "rds-ca-rsa2048-g1"
+}
+
 resource "aws_db_instance" "this" {
   identifier = local.resource_name
 
@@ -12,8 +16,9 @@ resource "aws_db_instance" "this" {
   port                   = local.port
   vpc_security_group_ids = [aws_security_group.this.id]
 
-  username = replace(data.ns_workspace.this.block_ref, "-", "_")
-  password = random_password.this.result
+  username           = replace(data.ns_workspace.this.block_ref, "-", "_")
+  password           = random_password.this.result
+  ca_cert_identifier = local.ca_cert_identifier
 
   // final_snapshot_identifier is unique to when an instance is launched
   // This prevents repeated launch+destroy from creating the same final snapshot and erroring
