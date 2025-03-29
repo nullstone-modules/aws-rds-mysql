@@ -1,3 +1,6 @@
+# 0.1.3 (Mar 29, 2025)
+* Added support for storage auto-scaling.
+
 # 0.1.2 (Aug 07, 2024)
 * Upgraded db-admin to use `provided.al2023` lambda runtime as a result of go runtime deprecation.
 * Upgraded CA Certificate for RDS instance.
