@@ -1,3 +1,6 @@
+# 0.1.5 (May 29, 2025)
+* Added `db_hostname` and `db_port` outputs.
+
 # 0.1.4 (Apr 17, 2025)
 * Eliminated problematic special characters from password generation.
 

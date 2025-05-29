@@ -13,6 +13,16 @@ output "db_master_secret_id" {
   description = "string ||| The ID of the secret in AWS Secrets Manager containing the password"
 }
 
+output "db_hostname" {
+  value       = aws_db_instance.this.address
+  description = "string ||| The hostname of the mysql instance."
+}
+
+output "db_port" {
+  value       = aws_db_instance.this.port
+  description = "number ||| The port of the mysql instance."
+}
+
 output "db_endpoint" {
   value       = aws_db_instance.this.endpoint
   description = "string ||| The endpoint URL to access the mysql instance."
