@@ -51,6 +51,27 @@ In dev environments, it is best to turn off to save on costs.
 EOF
 }
 
+variable "auto_upgrade_minor" {
+  type        = bool
+  default     = true
+  description = <<EOF
+Whether or not to automatically upgrade minor versions of the database.
+These upgrades are performed during the maintenance window (See `maintenance_window` variable).
+EOF
+}
+
+variable "maintenance_window" {
+  type        = string
+  default     = "Sat:03:00-Sat:03:30"
+  description = <<EOF
+A weekly time interval in which to performance maintenance (e.g. minor version upgrades, patches, etc.).
+This window is configured using UTC time zone.
+Syntax: "ddd:hh24:mi-ddd:hh24:mi"
+Example: "Mon:00:00-Mon:03:00"
+See [RDS Maintenance Window docs](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow) for more information.
+EOF
+}
+
 locals {
   port = 3306
 }
