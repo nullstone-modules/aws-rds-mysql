@@ -43,6 +43,11 @@ output "db_admin_function_name" {
   description = "string ||| AWS Lambda Function name for database admin utility"
 }
 
+output "db_log_groups" {
+  value       = { for log_type, group in aws_cloudwatch_log_group.this : log_type => group.name }
+  description = "map(string) ||| The names of the CloudWatch Log Groups (keyed by log type) where mysql logs are emitted for the DB Instance."
+}
+
 output "metrics_provider" {
   value       = "cloudwatch"
   description = "string ||| "

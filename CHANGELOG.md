@@ -1,3 +1,9 @@
+# 0.3.0 (Jul 02, 2026)
+* Enabled CloudWatch log exports (error, general, slowquery) with a configurable `var.log_retention` (default 90 days).
+* Granted the `log_reader` user read access to the new log groups, and added the `db_log_groups` output.
+* Upgraded terraform providers.
+* Switched to using `data.ns_workspace.aws_tags` which includes governance info.
+
 # 0.2.0 (Jun 05, 2025)
 * Added `var.maintenance_window` to control system updates are applied.
 * Added `var.auto_upgrade_minor` to allow disabling of minor version upgrades.
