@@ -1,3 +1,6 @@
+# 0.3.1 (Sep 21, 2026)
+* Enabled `copy_tags_to_snapshot` so automated and final snapshots carry the workspace tags.
+
 # 0.3.0 (Jul 02, 2026)
 * Enabled CloudWatch log exports (error, general, slowquery) with a configurable `var.log_retention` (default 90 days).
 * Granted the `log_reader` user read access to the new log groups, and added the `db_log_groups` output.
